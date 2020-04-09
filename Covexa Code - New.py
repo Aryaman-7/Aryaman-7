@@ -10,20 +10,20 @@ import pyttsx3
 
 engine=pyttsx3.init()
 
-def speech_init():
-    engine.setProperty('rate', 125)
+def speech_init(): # Initialises Speech Output
+    engine.setProperty('rate', 150)
     engine.setProperty('volume' , 1)
-    voices=engine.getPropertyvoices = engine.getProperty('voices')       #getting details of current voice
+    voices=engine.getPropertyvoices = engine.getProperty('voices')       
     engine.setProperty('voice', voices[0].id)
     pass
     
-def speech_output(x):
-    x="a"
+def speech_output(x): # Is the Speech Output Function
+    
     engine.say(x)
     engine.runAndWait()
     pass
 
-def open_website(a):
+def open_website(a): # Function To open Webbrowser
     import  webbrowser
 
     a = ""
@@ -35,54 +35,66 @@ def open_website(a):
     """ Main Code """
     
 speech_init()
-    
+
+print("I am Covexa your Corona HelpBot")
+x="i am covexa , your corona help bot"
+speech_output(x)
+
+print("Ask Any Question")
+
+print("To exit enter Z")  
+  
 userinp=input("Enter your question ").lower()
-print("To exit enter Z")
+
 while True :
+    
     if "corona" in userinp :
         x="It is a new virus"
         speech_output(x)
-    
-    if 'precaution' in userinp :
+        userinp=input("Enter your question ").lower()
+    if "precaution" in userinp :
         x="Quarantine yourselves if having symptoms or in infected area "
         speech_output(x)
         a="https://www.who.int"
         open_website(a)
-        
+        userinp=input("Enter your question ").lower()
         
     
-    if 'transmission' in userinp :
+    if "transmission" in userinp :
         x='covid nineteen transmits through droplets '
         speech_output(x)
-
+        userinp=input("Enter your question ").lower()
     
-    if 'origin' in userinp :
+    if "origin" in userinp :
         x="Wuhan, Hubei Province ,China"
         speech_output(x)
+        userinp=input("Enter your question ").lower()
         
-    if 'symptoms ' in userinp :
+    if "symptoms " in userinp :
         x='symptoms of corona include cough, fever,etc'
         speech_output(x)
+        userinp=input("Enter your question ").lower()
         
-        
-    if 'updates' in userinp :
+    if "updates" in userinp :
         a="https://www.who.int"
         open_website(a)
-        
+        userinp=input("Enter your question ").lower()
     
-    if 'santizer ' in userinp :
+    if "sanitizer " in userinp :
         x='use alcoholic hand sanitizer'
         speech_output(x) 
+        userinp=input("Enter your question ").lower()
         
-    if "z " in userinp :
+    if "z" in userinp :
         break
 
-print("Hope you are well")
+x="Hope you are well"
+speech_output(x)
+
 print("See you later")  
 
-engine.say ("see you later")
-engine.runAndWait()
-engine.stop()
+
+
       
    
         
