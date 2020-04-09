@@ -52,6 +52,7 @@ while True :
         x="It is a new virus"
         speech_output(x)
         userinp=input("Enter your question ").lower()
+        
     if "precaution" in userinp :
         x="Quarantine yourselves if having symptoms or in infected area "
         speech_output(x)
@@ -70,8 +71,8 @@ while True :
         speech_output(x)
         userinp=input("Enter your question ").lower()
         
-    if "symptoms " in userinp :
-        x='symptoms of corona include cough, fever,etc'
+    if "symptoms" in userinp :
+        x="symptoms of corona include cough, fever,etc "
         speech_output(x)
         userinp=input("Enter your question ").lower()
         
@@ -80,8 +81,8 @@ while True :
         open_website(a)
         userinp=input("Enter your question ").lower()
     
-    if "sanitizer " in userinp :
-        x='use alcoholic hand sanitizer'
+    if "sanitizer" in userinp :
+        x="use alcoholic hand sanitizer"
         speech_output(x) 
         userinp=input("Enter your question ").lower()
         
