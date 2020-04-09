@@ -26,7 +26,6 @@ def speech_output(x): # Is the Speech Output Function
 def open_website(a): # Function To open Webbrowser
     import  webbrowser
 
-    a = ""
 
     webbrowser.get("chrome").open_new_tab(a)
 
